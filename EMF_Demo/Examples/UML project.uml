@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_MySkIC2QEei_IP4T-yv0uA" name="UML project">
+  <packageImport xmi:id="_MySkIy2QEei_IP4T-yv0uA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_ZxCSgC2QEei_IP4T-yv0uA" name="AC system">
+    <region xmi:id="_ZxNRoC2QEei_IP4T-yv0uA" name="Region1">
+      <subvertex xmi:type="uml:State" xmi:id="_a9hTwC2QEei_IP4T-yv0uA" name="ON"/>
+      <subvertex xmi:type="uml:State" xmi:id="_cGV9AC2QEei_IP4T-yv0uA" name="off"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_diJzsC2QEei_IP4T-yv0uA"/>
+      <transition xmi:id="_eYwEgC2QEei_IP4T-yv0uA" name="on()" source="_diJzsC2QEei_IP4T-yv0uA" target="_a9hTwC2QEei_IP4T-yv0uA"/>
+      <transition xmi:id="_gHyZMC2QEei_IP4T-yv0uA" name="power off ()" source="_a9hTwC2QEei_IP4T-yv0uA" target="_cGV9AC2QEei_IP4T-yv0uA"/>
+      <transition xmi:id="_jZ0KoC2QEei_IP4T-yv0uA" name="power on" source="_cGV9AC2QEei_IP4T-yv0uA" target="_a9hTwC2QEei_IP4T-yv0uA"/>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:id="_MySkJC2QEei_IP4T-yv0uA">
+    <eAnnotations xmi:id="_MySkJS2QEei_IP4T-yv0uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+</uml:Package>

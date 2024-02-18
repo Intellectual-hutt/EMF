@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_TssmsBjnEequL40C0JBPCw" name="Demo Package">
+  <packagedElement xmi:type="uml:Class" xmi:id="_TssmsRjnEequL40C0JBPCw" name="Student">
+    <ownedAttribute xmi:id="_TssmshjnEequL40C0JBPCw" name="name" visibility="private" type="_TstNwxjnEequL40C0JBPCw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TssmsxjnEequL40C0JBPCw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TssmtBjnEequL40C0JBPCw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_TssmtRjnEequL40C0JBPCw" name="rollNo" visibility="private" type="_TstNxBjnEequL40C0JBPCw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TssmthjnEequL40C0JBPCw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TssmtxjnEequL40C0JBPCw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_TssmuBjnEequL40C0JBPCw" name="calculateGPA">
+      <ownedParameter xmi:id="_TssmuRjnEequL40C0JBPCw" name="grade" type="_TstNxRjnEequL40C0JBPCw"/>
+      <ownedParameter xmi:id="_TssmuhjnEequL40C0JBPCw" type="_TstNxhjnEequL40C0JBPCw" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_TssmuxjnEequL40C0JBPCw" name="Course">
+    <ownedAttribute xmi:id="_TssmvBjnEequL40C0JBPCw" name="title" visibility="private" type="_TstNxRjnEequL40C0JBPCw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TssmvRjnEequL40C0JBPCw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TssmvhjnEequL40C0JBPCw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_TstNwBjnEequL40C0JBPCw" name="code" visibility="private" type="_TstNxhjnEequL40C0JBPCw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TstNwRjnEequL40C0JBPCw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TstNwhjnEequL40C0JBPCw" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TstNwxjnEequL40C0JBPCw" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TstNxBjnEequL40C0JBPCw" name="Integer"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TstNxRjnEequL40C0JBPCw" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TstNxhjnEequL40C0JBPCw" name="Integer"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TstNxxjnEequL40C0JBPCw" name="register" memberEnd="_TstNyBjnEequL40C0JBPCw _TstNyxjnEequL40C0JBPCw">
+    <ownedEnd xmi:id="_TstNyBjnEequL40C0JBPCw" name="course" type="_TssmuxjnEequL40C0JBPCw" association="_TstNxxjnEequL40C0JBPCw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TstNyRjnEequL40C0JBPCw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TstNyhjnEequL40C0JBPCw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_TstNyxjnEequL40C0JBPCw" name="student" type="_TssmsRjnEequL40C0JBPCw" association="_TstNxxjnEequL40C0JBPCw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TstNzBjnEequL40C0JBPCw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TstNzRjnEequL40C0JBPCw"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Package>

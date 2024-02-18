@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_8Q8cUMWQEeWgZcpVFg427Q" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_iLdEsMWREeWgZcpVFg427Q" name="Account">
+    <ownedRule xmi:type="uml:Constraint" xmi:id="_fQ40IMZZEeWQlcMChNwUFg" name="withdraw">
+      <specification xmi:type="uml:StringExpression" xmi:id="_yPsLAMZaEeWQlcMChNwUFg">
+        <operand xmi:type="uml:OpaqueExpression" xmi:id="_yPsyEMZaEeWQlcMChNwUFg" name="withdraw">
+          <language>Natural language</language>
+          <body>balance>1000 and amount>10</body>
+        </operand>
+      </specification>
+    </ownedRule>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mCsH0MZIEeWQlcMChNwUFg" name="balance" type="_0iYEgMZIEeWQlcMChNwUFg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8Zt0MMZIEeWQlcMChNwUFg" name="amount" type="_0iYEgMZIEeWQlcMChNwUFg"/>
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_8cm5wMWQEeWgZcpVFg427Q" name="AccountStateMachine">
+      <region xmi:type="uml:Region" xmi:id="_8fKegMWQEeWgZcpVFg427Q" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_B75FgMZYEeWQlcMChNwUFg" source="__shq8MZXEeWQlcMChNwUFg" target="_wFRwoMZUEeWQlcMChNwUFg"/>
+        <transition xmi:type="uml:Transition" xmi:id="_E_3z4MZYEeWQlcMChNwUFg" name="open" source="_wFRwoMZUEeWQlcMChNwUFg" target="_1sZKIMZUEeWQlcMChNwUFg">
+          <trigger xmi:type="uml:Trigger" xmi:id="_Q1unkMZYEeWQlcMChNwUFg" name="open" event="_P69ocMZYEeWQlcMChNwUFg"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_iTcboMZYEeWQlcMChNwUFg" name="close" source="_1sZKIMZUEeWQlcMChNwUFg" target="_3AZvsMZUEeWQlcMChNwUFg">
+          <trigger xmi:type="uml:Trigger" xmi:id="_oz0_cMZYEeWQlcMChNwUFg" name="close" event="_okBB0MZYEeWQlcMChNwUFg"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_ETD7wMZZEeWQlcMChNwUFg" name="reopen" source="_3AZvsMZUEeWQlcMChNwUFg" target="_1sZKIMZUEeWQlcMChNwUFg">
+          <trigger xmi:type="uml:Trigger" xmi:id="_HuVv0MZZEeWQlcMChNwUFg" name="reopen" event="_HJSiAMZZEeWQlcMChNwUFg"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_J2jZgMZZEeWQlcMChNwUFg" name="withdraw" guard="_JvdysMZcEeWQlcMChNwUFg" source="_1sZKIMZUEeWQlcMChNwUFg" target="_1sZKIMZUEeWQlcMChNwUFg">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_JvdysMZcEeWQlcMChNwUFg" name="withdraw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_QT-BgMZcEeWQlcMChNwUFg" name="withdraw">
+              <language>Natural language</language>
+              <body>balance>1000 and amount>10</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_CVX1IMZbEeWQlcMChNwUFg" name="withdraw" event="_B7CpkMZbEeWQlcMChNwUFg"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_QvwbEMZbEeWQlcMChNwUFg" name="deposit" source="_1sZKIMZUEeWQlcMChNwUFg" target="_1sZKIMZUEeWQlcMChNwUFg">
+          <trigger xmi:type="uml:Trigger" xmi:id="_bapQcMZbEeWQlcMChNwUFg" name="deposit" event="_a5d2AMZbEeWQlcMChNwUFg"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_ihmsEMZbEeWQlcMChNwUFg" name="withdraw" guard="__U-JwMZbEeWQlcMChNwUFg" source="_1sZKIMZUEeWQlcMChNwUFg" target="_3AZvsMZUEeWQlcMChNwUFg">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="__U-JwMZbEeWQlcMChNwUFg" name="withdraw">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="__U-JwcZbEeWQlcMChNwUFg" name="withdraw">
+              <language>Natural language</language>
+              <body>balance=100 and amount=100</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_pRpcgMZbEeWQlcMChNwUFg" name="withdraw" event="_oxANkMZbEeWQlcMChNwUFg"/>
+        </transition>
+        <subvertex xmi:type="uml:State" xmi:id="_wFRwoMZUEeWQlcMChNwUFg" name="initialized"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1sZKIMZUEeWQlcMChNwUFg" name="active"/>
+        <subvertex xmi:type="uml:State" xmi:id="_3AZvsMZUEeWQlcMChNwUFg" name="inactive"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="__shq8MZXEeWQlcMChNwUFg" name="Initial1"/>
+      </region>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_uHOywMZYEeWQlcMChNwUFg" name="open"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vGepQMZYEeWQlcMChNwUFg" name="close"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_voApAMZYEeWQlcMChNwUFg" name="withdraw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZceeIMZcEeWQlcMChNwUFg" name="amount" type="_0iYEgMZIEeWQlcMChNwUFg" direction="inout"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yHhYYMZYEeWQlcMChNwUFg" name="deposit">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_eeQ9AMZcEeWQlcMChNwUFg" name="amount" type="_0iYEgMZIEeWQlcMChNwUFg" direction="inout"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0EBhUMZYEeWQlcMChNwUFg" name="reOpen"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3GnvoMZYEeWQlcMChNwUFg" name="checkBalance"/>
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_0iYEgMZIEeWQlcMChNwUFg" name="Integer"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BrIqgMZJEeWQlcMChNwUFg" name="Current">
+    <generalization xmi:type="uml:Generalization" xmi:id="_GznnQMZJEeWQlcMChNwUFg" general="_iLdEsMWREeWgZcpVFg427Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ck3u4MZJEeWQlcMChNwUFg" name="Savings">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HltLgMZJEeWQlcMChNwUFg" general="_iLdEsMWREeWgZcpVFg427Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OEGyUMZJEeWQlcMChNwUFg" name="Branch">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TWJTsMZJEeWQlcMChNwUFg" name="code" type="_SU1nsMZJEeWQlcMChNwUFg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WmkioMZJEeWQlcMChNwUFg" name="address" type="_ROFbAMZJEeWQlcMChNwUFg"/>
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_ROFbAMZJEeWQlcMChNwUFg" name="String"/>
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_SU1nsMZJEeWQlcMChNwUFg" name="Integer"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ff560MZJEeWQlcMChNwUFg" name="Bank">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QKn9cMZKEeWQlcMChNwUFg" name="name" type="_g5pU8MZJEeWQlcMChNwUFg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TCuzAMZKEeWQlcMChNwUFg" name="region" type="_g5pU8MZJEeWQlcMChNwUFg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_aE1_U8ZUEeWQlcMChNwUFg" name="branch" type="_OEGyUMZJEeWQlcMChNwUFg" aggregation="shared" association="_aE1_UMZUEeWQlcMChNwUFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mtuLYMZUEeWQlcMChNwUFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mtuLYcZUEeWQlcMChNwUFg" value="*"/>
+    </ownedAttribute>
+    <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_g5pU8MZJEeWQlcMChNwUFg" name="String"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wX9RgMZTEeWQlcMChNwUFg" memberEnd="_wYuGgMZTEeWQlcMChNwUFg _wYutkMZTEeWQlcMChNwUFg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wYHpkMZTEeWQlcMChNwUFg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wYIQoMZTEeWQlcMChNwUFg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wYutkMZTEeWQlcMChNwUFg" name="account" type="_iLdEsMWREeWgZcpVFg427Q" association="_wX9RgMZTEeWQlcMChNwUFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dx13UMZUEeWQlcMChNwUFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dx13UcZUEeWQlcMChNwUFg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wYuGgMZTEeWQlcMChNwUFg" name="branch" type="_OEGyUMZJEeWQlcMChNwUFg" association="_wX9RgMZTEeWQlcMChNwUFg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ARmDsMZUEeWQlcMChNwUFg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JDWNMMZUEeWQlcMChNwUFg" memberEnd="_JDfXIsZUEeWQlcMChNwUFg _JDfXI8ZUEeWQlcMChNwUFg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JDfXIMZUEeWQlcMChNwUFg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JDfXIcZUEeWQlcMChNwUFg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JDfXI8ZUEeWQlcMChNwUFg" name="bank" type="_ff560MZJEeWQlcMChNwUFg" association="_JDWNMMZUEeWQlcMChNwUFg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JDfXIsZUEeWQlcMChNwUFg" name="branch" type="_OEGyUMZJEeWQlcMChNwUFg" association="_JDWNMMZUEeWQlcMChNwUFg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UHAu8MZUEeWQlcMChNwUFg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UHAu8cZUEeWQlcMChNwUFg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_aE1_UMZUEeWQlcMChNwUFg" memberEnd="_aE1_U8ZUEeWQlcMChNwUFg _aE1_VMZUEeWQlcMChNwUFg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aE1_UcZUEeWQlcMChNwUFg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aE1_UsZUEeWQlcMChNwUFg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_aE1_VMZUEeWQlcMChNwUFg" name="bank" type="_ff560MZJEeWQlcMChNwUFg" association="_aE1_UMZUEeWQlcMChNwUFg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gHqdYcZUEeWQlcMChNwUFg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_P69ocMZYEeWQlcMChNwUFg" name="open" operation="_uHOywMZYEeWQlcMChNwUFg"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_okBB0MZYEeWQlcMChNwUFg" name="close" operation="_vGepQMZYEeWQlcMChNwUFg"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_HJSiAMZZEeWQlcMChNwUFg" name="reopen" operation="_0EBhUMZYEeWQlcMChNwUFg"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_B7CpkMZbEeWQlcMChNwUFg" name="withdraw" operation="_voApAMZYEeWQlcMChNwUFg"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_a5d2AMZbEeWQlcMChNwUFg" name="deposit" operation="_yHhYYMZYEeWQlcMChNwUFg"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_oxANkMZbEeWQlcMChNwUFg" name="withdraw" operation="_voApAMZYEeWQlcMChNwUFg"/>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_9laU0MZUEeWQlcMChNwUFg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9laU0cZUEeWQlcMChNwUFg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
